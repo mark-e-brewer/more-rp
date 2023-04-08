@@ -12,22 +12,22 @@ function Header({ title }) {
 function App() {
   const names = ["Ada Lovelace", "Grace Hopper", "Margaret Hamilton"]
 
-  const [likes, setLikes] = React.useState(0)
+  const [counter, setcounter] = React.useState(0)
 
   function handleClick() {
-    setLikes(likes + 1)
+    setcounter(counter + 1)
   }
 
   return (
     <div>
-      <Header title="Develop. Preview. Ship. 🚀" />
+      <Header title="Learning React!" />
       <ul>
         {names.map((name) => (
           <li key={name}>{name}</li>
         ))}
       </ul>
 
-      <button onClick={handleClick}>Like ({likes})</button>
+      <button onClick={handleClick}>Like ({counter})</button>
     </div>
   )
 }
